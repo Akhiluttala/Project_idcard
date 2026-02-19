@@ -1,0 +1,211 @@
+/* -------- Global Page Style -------- */
+body {
+    color: brown;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------- Home Page Container -------- */
+.container {
+    width: 360px;
+    background: #ffffff;
+    padding: 28px 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.container h2 {
+    margin-bottom: 22px;
+    color: #1f3a5f;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+}
+
+/* -------- Input Fields -------- */
+.container input {
+    width: 100%;
+    padding: 11px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 15px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container input:focus {
+    outline: none;
+    border-color: #1f3a5f;
+    box-shadow: 0 0 6px rgba(31, 58, 95, 0.4);
+}
+
+/* -------- Button Style -------- */
+.container button {
+    width: 100%;
+    padding: 11px;
+    margin-top: 18px;
+    background: linear-gradient(135deg, #1f3a5f, #294c75);
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+}
+
+.container button:hover {
+    background: linear-gradient(135deg, #162c49, #1f3a5f);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+.container button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* -------- ID Card Preview -------- */
+.id-card {
+    width: 340px;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+    animation: slideUp 0.7s ease;
+}
+
+/* -------- ID Card Header -------- */
+.id-card h3 {
+    margin: 0;
+    padding: 16px;
+    background: linear-gradient(135deg, #1f3a5f, #0f2027);
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* -------- ID Card Body -------- */
+.id-card .content {
+    padding: 22px;
+    text-align: left;
+}
+
+.id-card p {
+    margin: 12px 0;
+    font-size: 15px;
+    color: #374151;
+}
+
+.id-card p b {
+    color: #1f3a5f;
+}
+
+/* -------- ID Card Footer -------- */
+.id-card .footer {
+    padding: 12px;
+    background: #f3f4f6;
+    text-align: center;
+    font-weight: 600;
+    color: #374151;
+    letter-spacing: 0.8px;
+}
+
+/* -------- Animations -------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   PHOTO UPLOAD (HOME PAGE)
+   =============================== */
+
+.upload-label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin: 12px 0 6px;
+    color: #1f3a5f;
+    font-size: 14px;
+}
+
+/* Live photo preview (before submit) */
+.photo-preview {
+    width: 120px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #1f3a5f;
+    margin: 12px auto 18px;
+    display: none;
+    background-color: #f3f4f6;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* File input styling */
+input[type="file"] {
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+/* ===============================
+   PHOTO ON ID CARD (PREVIEW PAGE)
+   =============================== */
+
+.photo {
+    width: 95px;
+    height: 115px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #1f3a5f;
+    display: block;
+    margin: 0 auto 14px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ===============================
+   RESPONSIVE ADJUSTMENT
+   =============================== */
+
+@media (max-width: 480px) {
+    .photo-preview {
+        width: 100px;
+        height: 120px;
+    }
+
+    .photo {
+        width: 85px;
+        height: 105px;
+    }
+}

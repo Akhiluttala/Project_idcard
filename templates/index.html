@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>ID Card Generation</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="text" name="year" placeholder="Academic Year" required>
+        <input type="text" name="Rollnumber" placeholder="Rollnumber" required>
+        <input type="text" name="Branch" placeholder="Branch" required>
+        <label class="upload-label">Upload Photo</label>
+        <input type="file" name="photo" onchange="previewPhoto(event)" required>
+        <img id="photoPreview" class="photo-preview">
+
+        <button type="submit">Generate ID Card</button>
+    </form>
+</div>
+<script>
+function previewPhoto(event) {
+    const reader = new FileReader();
+    reader.onload = function () {
+        const img = document.getElementById('photoPreview');
+        img.src = reader.result;
+        img.style.display = "block";
+    };
+    reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+
+ 
+</body>
+</html>

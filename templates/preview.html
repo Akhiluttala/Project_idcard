@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ID Card Preview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="id-card">
+    <h3>Malla reddy college of engineering</h3>
+
+    <div class="content">
+        <img src="{{ url_for('static', filename='uploads/' + photo) }}" class="photo">
+        <p><b>Name:       </b> {{ name }}</p>
+        <p><b>Rollnumber: </b> {{ Rollnumber }}</p>
+        <p><b>Year:       </b> {{ year }}</p>
+        <p><b>Branch:     </b>{{ Branch }}</p>
+    </div>
+
+</div>
+
+</body>
+</html>
