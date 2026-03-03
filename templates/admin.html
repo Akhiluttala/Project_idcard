@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h2>All Students</h2>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Roll</th>
+            <th>Year</th>
+            <th>Branch</th>
+            <th>Photo</th>
+        </tr>
+
+        {% for student in students %}
+        <tr>
+            <td>{{ student[0] }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[2] }}</td>
+            <td>{{ student[3] }}</td>
+            <td>{{ student[4] }}</td>
+            <td>
+                <img src="{{ url_for('static', filename='uploads/' + student[5]) }}" width="50">
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
