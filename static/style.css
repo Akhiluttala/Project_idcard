@@ -1,3 +1,93 @@
+/* ===============================
+   Responsive Layout
+   =============================== */
+
+/* Tablet view */
+@media (max-width: 768px) {
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .id-card {
+        width: 90%;
+    }
+
+    .photo-preview {
+        width: 100px;
+        height: 120px;
+    }
+
+    .photo {
+        width: 80px;
+        height: 100px;
+    }
+
+    .container h2 {
+        font-size: 20px;
+    }
+
+    .container input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .container button {
+        font-size: 15px;
+    }
+}
+
+
+/* Mobile view */
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+    .id-card {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .id-card h3 {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .id-card p {
+        font-size: 13px;
+    }
+
+    .photo-preview {
+        width: 90px;
+        height: 110px;
+    }
+
+    .photo {
+        width: 70px;
+        height: 90px;
+    }
+
+    .container input {
+        font-size: 13px;
+        padding: 9px;
+    }
+
+    .container button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
 /* -------- Global Page Style -------- */
 body {
     color: brown;
